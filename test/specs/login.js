@@ -1,5 +1,3 @@
-const loginPage = require("../pageobjects/login.page");
-const { validUser } = require("../pageobjects/login.page");
 const LoginPage = require("../pageobjects/login.page");
 const users = ['standard_user', 'problem_user', 'performance_glitch_user'];
 
