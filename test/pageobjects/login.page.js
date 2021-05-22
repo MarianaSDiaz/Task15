@@ -4,10 +4,6 @@ class LoginPage {
     get errorBox (){ return $('#login_button_container')}
     get btnLogin () { return $('#login-button') }
 
-    click () {
-        this.btnLogin.click();
-    }
-
     login (email, password) {
         this.inputEmail.setValue(email);
         this.inputPassword.setValue(password);

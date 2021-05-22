@@ -10,9 +10,10 @@ class InventoryPage {
     get resetBtn () {return $('#reset_sidebar_link')}
 
     open () {
-        LoginPage.setEmail('standard_user');
-        LoginPage.setPassword('secret_sauce');
-        LoginPage.click();
+        LoginPage.open();
+        LoginPage.inputEmail.setValue('standard_user');
+        LoginPage.inputPassword.setValue('secret_sauce');
+        LoginPage.btnLogin.click();
     }
 }
 
