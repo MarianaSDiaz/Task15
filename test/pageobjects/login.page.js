@@ -1,7 +1,6 @@
 class LoginPage {
     get inputEmail () { return $('#user-name') }
     get inputPassword () { return $('#password') }
-    //get alertBox () { return $$('.error-button')[0] }
     get errorBox (){ return $('#login_button_container')}
     get btnLogin () { return $('#login-button') }
 
