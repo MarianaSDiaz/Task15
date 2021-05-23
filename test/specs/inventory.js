@@ -1,4 +1,3 @@
-const inventoryPage = require("../pageobjects/inventory.page");
 const InventoryPage = require("../pageobjects/inventory.page");
 const LoginPage = require("../pageobjects/login.page");
 
@@ -42,6 +41,13 @@ describe("Inventory automation", () =>{
             InventoryPage.backPackAdd.click();
             expect(InventoryPage.itemAdded).toHaveText("1");
             browser.pause(3000);
+        });
+    });
+    describe("Testing the cart button", () => {
+        it("the cart button should redirect to the cart", () => {
+            InventoryPage.shopCart.click();
+            expect(browser).toHaveUrl("https://www.saucedemo.com/cart.html");
+            browser.pause(3000)
         });
     });
 });

@@ -20,7 +20,8 @@
   "scripts": {
     "test": "npx wdio run ./wdio.conf.js",
     "login": "npx wdio run ./wdio.conf.js --spec login.js",
-    "inventory": "npx wdio run ./wdio.conf.js --spec inventory.js"
+    "inventory": "npx wdio run ./wdio.conf.js --spec inventory.js",
+    "cart": "npx wdio run ./wdio.conf.js --spec cart.js"
   },
   "author": "",
   "license": "ISC"
