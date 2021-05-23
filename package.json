@@ -18,7 +18,9 @@
     "wdio-chromedriver-service": "^7.1.0"
   },
   "scripts": {
-    "test": "npx wdio run ./wdio.conf.js"
+    "test": "npx wdio run ./wdio.conf.js",
+    "login": "npx wdio run ./wdio.conf.js --spec login.js",
+    "inventory": "npx wdio run ./wdio.conf.js --spec inventory.js"
   },
   "author": "",
   "license": "ISC"
