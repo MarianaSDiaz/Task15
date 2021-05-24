@@ -1,5 +1,6 @@
 const InventoryPage = require("../pageobjects/inventory.page");
-const LoginPage = require("../pageobjects/login.page");
+// const LoginPage = require("../pageobjects/login.page");
+// const CartPage = require("../pageobjects/cart.page");
 
 describe("Inventory automation", () =>{
     beforeAll("Open browser", () => {
