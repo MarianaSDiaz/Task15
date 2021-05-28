@@ -12,6 +12,7 @@ class CartPage {
     get checkoutContinue () {return $('#continue')}
     get checkoutCancel () {return $('#cancel')}
     get finishBtn () {return $('#finish')}
+    get backHomeBtn () {return $('#back-to-products')}
 
 
     open() {
