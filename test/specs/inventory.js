@@ -52,6 +52,15 @@ describe("Inventory automation", () =>{
             browser.pause(3000)
         });
     });
+    describe("Testing footer buttons", () => {
+        it('should check that the links are correct', () => {
+            InventoryPage.open();
+            expect(InventoryPage.twitterBtn).toHaveHref('https://twitter.com/saucelabs');
+            expect(InventoryPage.facebookBtn).toHaveHref('https://www.facebook.com/saucelabs');
+            expect(InventoryPage.linkedinBtn).toHaveHref('https://www.linkedin.com/company/sauce-labs/');
+            browser.pause(3000)
+        });
+    })
     describe("Testing the sort button", () => {
         it("clicking the option NAME (AtoZ)", () => {
             InventoryPage.open();
@@ -66,5 +75,5 @@ describe("Inventory automation", () =>{
             browser.pause(2000);
             expect(itemsNames).toEqual(sortedNames);
         });
-    })
+    });
 });
