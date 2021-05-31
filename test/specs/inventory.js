@@ -2,6 +2,7 @@ const InventoryPage = require("../pageobjects/inventory.page");
 // const LoginPage = require("../pageobjects/login.page");
 // const CartPage = require("../pageobjects/cart.page");
 
+
 describe("Inventory automation", () =>{
     beforeAll("Open browser", () => {
         InventoryPage.open();
@@ -51,4 +52,19 @@ describe("Inventory automation", () =>{
             browser.pause(3000)
         });
     });
+    describe("Testing the sort button", () => {
+        it("clicking the option NAME (AtoZ)", () => {
+            InventoryPage.open();
+            InventoryPage.sortByNameAz.click();
+            browser.pause(2000);
+            let itemsNames = InventoryPage.itemsName.map(element => element.getText())
+            let sortedNames = [];
+            InventoryPage.itemsName.forEach(element => {
+                sortedNames.push(element.getText());
+            });
+            sortedNames = sortedNames.sort();
+            browser.pause(2000);
+            expect(itemsNames).toEqual(sortedNames);
+        });
+    })
 });

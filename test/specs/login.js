@@ -44,4 +44,12 @@ describe("Login automation", () =>{
             expect(browser).toHaveUrl("https://www.saucedemo.com/inventory.html");
         });
     });
+    describe("Login wih the locked out user", () => {
+        it("the user should be locked", () => {
+            LoginPage.open();
+            LoginPage.login("locked_out_user", "secret_sauce");
+            LoginPage.btnLogin.click();
+            expect(LoginPage.errorBox).toHaveText("Epic sadface: Sorry, this user has been locked out.");
+        });
+    });
 });
