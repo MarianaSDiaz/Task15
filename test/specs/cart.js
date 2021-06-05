@@ -35,5 +35,5 @@ describe("Cart automation", () => {
             CartPage.finishBtn.click();
             expect(browser).toHaveUrl("https://www.saucedemo.com/checkout-complete.html");
         });
-    });    
+    });
 });

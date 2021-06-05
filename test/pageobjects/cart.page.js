@@ -14,19 +14,16 @@ class CartPage {
     get finishBtn () {return $('#finish')}
     get backHomeBtn () {return $('#back-to-products')}
 
-
     open() {
         LoginPage.open();
         LoginPage.inputEmail.setValue('standard_user');
         LoginPage.inputPassword.setValue('secret_sauce');
         LoginPage.btnLogin.click();
     }
-
     addItem() {
         InventoryPage.backPackAdd.click();
         InventoryPage.shopCart.click();
     }
-
     completeCheckout(name, lastName, zip) {
         this.checkoutName.click();
         this.checkoutName.setValue(name);

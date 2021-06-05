@@ -11,7 +11,7 @@ describe("Login automation", () =>{
             LoginPage.setPassword("secret_sauce");
             LoginPage.btnLogin.click();
             expect(LoginPage.errorBox).toHaveText("Epic sadface: Username is required");
-            browser.pause(3000);    
+            browser.pause(3000);
         });
         it("If the user is invalid show the proper msg", () => {
             LoginPage.setEmail("invalid")
@@ -27,7 +27,7 @@ describe("Login automation", () =>{
             LoginPage.setPassword("");
             LoginPage.btnLogin.click();
             expect(LoginPage.errorBox).toHaveText("Epic sadface: Password is required");
-            browser.pause(3000);    
+            browser.pause(3000);
         });
         it("If the password is invalid show the proper msg", () => {
             LoginPage.setEmail("standard_user")

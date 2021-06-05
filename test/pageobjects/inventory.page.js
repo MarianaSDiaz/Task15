@@ -24,7 +24,6 @@ class InventoryPage {
     get itemsName() { return $$('.inventory_item_name')}
     get itemsPrice() { return $$('.inventory_item_price')}
 
-
     open () {
         LoginPage.open();
         LoginPage.inputEmail.setValue('standard_user');
